@@ -42,3 +42,26 @@
 | 50 5 5 5 |       |
 +----------+-------+
 '''
+__author__ = 'student'
+mas = open('input.txt','r')
+V = open('output','w')
+N = mas.readline()
+N = N.rstrip
+E=mas.readline()
+E = E.rstrip
+N = int(N)
+p=0
+v=0
+while N>p:
+    if E[p]=='5':
+        v-=1
+    if E[p]=='10':
+        v+=1
+    if E[p]=='50':
+        v+=9
+    if E[p]:
+        v+=19
+    p+=1
+print(v,file=V)
+V.close()
+mas.close()
